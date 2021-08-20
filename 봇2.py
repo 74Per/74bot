@@ -1,5 +1,6 @@
 import discord, datetime
 import requests
+import os
 from bs4 import BeautifulSoup
 import urllib
 token = "ODc4MDY1NTY1NzA3NjY1NDE4.YR7wSA.v0bKKqlqaLEauaLTZ0zK1dOT66U"
@@ -139,5 +140,5 @@ async def on_message(message):
         typoonEmbed.set_image(url=imgUrl)
         await message.channel.send(embed=typoonEmbed)
 
-
-client.run(token)
+access_token = os.environ["BOT_TOKEN"]
+client.run('access_token')
